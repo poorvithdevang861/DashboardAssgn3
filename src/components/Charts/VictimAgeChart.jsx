@@ -34,21 +34,21 @@ const VictimAgeChart = ({ data }) => {
   return (
     <div style={{ width: '100%', height: '100%', maxWidth: '100%', minHeight: '200px', display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', padding: '0 4px' }}>
-        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-          Total Victims: <strong style={{ color: '#0A1A3A' }}>{total.toLocaleString()}</strong>
+        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#e8edf7ff' }}>
+          Total Victims: <strong style={{ color: '#9abafaff' }}>{total.toLocaleString()}</strong>
         </div>
         {topAgeGroup && (
-          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
+          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#e0e5eeff' }}>
             Most Affected: <strong style={{ color: '#DC143C' }}>{topAgeGroup.ageGroup}</strong> ({topAgeGroup.percentage}%)
           </div>
         )}
       </div>
       <div style={{ flex: 1, minHeight: 0 }}>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: 5 }}>
+          <BarChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-            <XAxis dataKey="ageGroup" stroke="#6b7280" fontSize={11} className="text-xs" />
-            <YAxis stroke="#6b7280" fontSize={11} />
+            <XAxis dataKey="ageGroup" stroke="#f7f9fcff" fontSize={11} className="text-xs" />
+            <YAxis stroke="#dce0e9ff" fontSize={11} />
             <Tooltip 
               contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px', fontSize: '12px' }}
               formatter={(value, name, props) => [
@@ -57,7 +57,7 @@ const VictimAgeChart = ({ data }) => {
               ]}
               cursor={{ fill: 'rgba(255, 140, 148, 0.1)' }}
             />
-            <Bar dataKey="count" fill="#FF8C94" radius={[8, 8, 0, 0]} />
+            <Bar dataKey="count" fill="#c5201bff" radius={[8, 8, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

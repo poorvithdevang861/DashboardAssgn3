@@ -80,8 +80,8 @@ function App() {
       {/* Main Dashboard Content */}
       <div className="dashboard-main">
         {/* Header */}
-        <h1 className="dashboard-header">Crime Intelligence Overview</h1>
-        <p className="dashboard-subtitle">Get Real time update on Indian Crimes</p>
+        <h1 className="dashboard-header">Crime Intelligence Overview(2020-24)</h1>
+        <h1 className="dashboard-subtitle">Get Real time update on Indian Crimes</h1>
 
         {/* KPI Tiles */}
         <KPITiles data={filteredData} allData={crimeData} />
@@ -134,4 +134,3 @@ function App() {
 }
 
 export default App
-

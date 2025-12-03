@@ -12,7 +12,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #7596d4;
+  background: #000000;
   overflow: hidden;
 }
 
@@ -30,31 +30,32 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #3d0c03;
-  gap: clamp(12px, 1.5vw, 24px);
-  padding: clamp(12px, 1.5vw, 24px);
+  background: #0b3d016a;
+  gap: clamp(12px, 1.5vw, 12px);
+  padding: clamp(2px, 1.5vw, 12px);
 }
 
 .dashboard-main {
   display: grid;
   grid-template-rows: auto auto auto 1fr;
-  gap: clamp(16px, 2vw, 32px);
+  gap: clamp(8px, 1vw, 12px);
   overflow: hidden;
   min-width: 0;
   max-width: 100%;
 }
 
 .dashboard-header {
-  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-size: clamp(0.25rem, 2vw, 2rem);
   font-weight: bold;
-  color: #82f0e8;
+  color: #7ad2cd;
   flex-shrink: 0;
+  margin-bottom: 6px;
 }
 
 .dashboard-subtitle {
   font-size: clamp(0.85rem, 1vw, 1rem);
-  color: #c0f2ee;
-  margin-top: 1px;
+  color: #45b6ac;
+  margin-top: 0;
 }
 
 /* Fluid Charts Grid */
@@ -69,12 +70,13 @@ body {
 }
 
 .chart-card {
-  background: #f8f8f8;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(239, 93, 93, 0.1);
+  background: #01271de1;
+  border-radius: 14px;
+  border: 2px solid #002a11;
+  box-shadow: 0 1px 3px rgba(148, 69, 69, 0.1);
   padding: clamp(10px, 1.2vw, 18px);
   display: flex;
-  gap: 8px;
+  gap: 0px;
   flex-direction: column;
   min-height: 0;
   min-width: 0;
@@ -85,7 +87,7 @@ body {
 .chart-title {
   font-size: clamp(0.875rem, 1.2vw, 1.125rem);
   font-weight: 600;
-  color: #557fc3;
+  color: #477fd3;
   margin-bottom: clamp(8px, 1vw, 16px);
   flex-shrink: 0;
   display: flex;
@@ -139,9 +141,9 @@ body {
 
 /* Filter Sidebar Styles */
 .filter-sidebar {
-  background: #fffefd;
+  background: #000000;
   border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(7, 0, 0, 0.1);
   padding: clamp(12px, 1.5vw, 20px);
   display: flex;
   flex-direction: column;
@@ -154,7 +156,7 @@ body {
 .filter-title {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: bold;
-  color: #010817;
+  color: #bec8df;
   margin-bottom: clamp(4px, 0.5vw, 8px);
 }
 
@@ -169,14 +171,14 @@ body {
   display: block;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 500;
-  color: #012662;
+  color: #acbeda;
   margin-bottom: clamp(4px, 0.5vw, 8px);
 }
 
 .filter-select {
   width: 100%;
   padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1vw, 12px);
-  border: 1px solid #29374c;
+  border: 2px solid #29374c;
   border-radius: 8px;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   background: rgb(11, 0, 0);
@@ -210,31 +212,31 @@ body {
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(12px, 1.5vw, 24px);
-  grid-auto-rows: minmax(110px, auto);
+  gap: clamp(12px, 1.5vw, 6px);
+  grid-auto-rows: minmax(150px, auto);
   min-width: 0;
 }
 
 .kpi-card {
-  background: #c5e9e6;
-  border-radius: 16px;
+  background: #012724c3;
+  border-radius: 14px;
+  border: 2px solid #00261e;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: clamp(10px, 1vw, 16px);
+  padding: clamp(8px, 1vw, 16px);
   min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .kpi-label {
   font-size: clamp(0.75rem, 1vw, 0.875rem);
-  color: #647597;
-  margin-bottom: clamp(4px, 0.5vw, 8px);
+  color: #ebeef3;
+  margin-bottom: clamp(2px, 0.5vw, 4px);
 }
 
 .kpi-value {
-  font-weight: bold;
-  color: #053390;
+  font-weight: bolder;
+  color: #056dec;
   word-break: break-word;
 }
 
@@ -243,7 +245,7 @@ body {
 }
 
 .kpi-value-medium {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .kpi-value-container {
@@ -261,7 +263,7 @@ body {
 }
 
 .kpi-trend.trend-up {
-  color: #10B981;
+  color: #079264;
 }
 
 .kpi-trend.trend-down {
@@ -269,14 +271,14 @@ body {
 }
 
 .kpi-trend-label {
-  color: #6b7280;
+  color: #99a0af;
   font-weight: 400;
   font-size: clamp(0.65rem, 0.8vw, 0.75rem);
 }
 
 .kpi-subtext {
   font-size: clamp(0.7rem, 0.9vw, 0.85rem);
-  color: #6b7280;
-  margin-top: 4px;
+  color: #7f899b;
+  margin-top: 2px;
 }
 

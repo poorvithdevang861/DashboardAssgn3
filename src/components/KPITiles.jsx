@@ -59,7 +59,7 @@ const KPITiles = ({ data, allData }) => {
   const TrendIcon = ({ isIncreasing }) => (
     <svg 
       width="16" 
-      height="16" 
+      height="14" 
       viewBox="0 0 16 16" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"

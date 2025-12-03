@@ -74,13 +74,12 @@ const CityCrimeHeatmap = ({ data }) => {
               textAlign: 'left', 
               padding: 'clamp(4px, 0.6vw, 8px)', 
               fontWeight: 600, 
-              color: '#374151', 
+              color: '#eff2f6ff', 
               position: 'sticky', 
-              left: 0, 
-              backgroundColor: '#ffffff', 
+              left: 0,  
               zIndex: 10,
               width: '20%',
-              borderRight: '2px solid #d1d5db'
+              borderRight: '2px solidrgb(111, 150, 208)'
             }}>
               City
             </th>
@@ -90,11 +89,11 @@ const CityCrimeHeatmap = ({ data }) => {
                 style={{ 
                   padding: 'clamp(4px, 0.6vw, 8px)', 
                   fontWeight: 600, 
-                  color: '#374151', 
+                  color: '#f6f6f6ff', 
                   textAlign: 'center',
                   fontSize: 'clamp(0.65rem, 0.85vw, 0.75rem)',
                   wordWrap: 'break-word',
-                  borderBottom: '2px solid #d1d5db'
+                  borderBottom: '2px solidrgb(85, 137, 214)'
                 }}
                 title={type}
               >
@@ -109,12 +108,11 @@ const CityCrimeHeatmap = ({ data }) => {
               <td style={{ 
                 padding: 'clamp(4px, 0.6vw, 8px)', 
                 fontWeight: 500, 
-                color: '#374151', 
+                color: '#c1cbdbff', 
                 position: 'sticky', 
-                left: 0, 
-                backgroundColor: '#ffffff', 
+                left: 0,               
                 zIndex: 10, 
-                borderRight: '2px solid #d1d5db',
+                borderRight: '2px solidrgb(41, 94, 174)',
                 fontSize: 'clamp(0.7rem, 0.9vw, 0.8rem)'
               }}>
                 {row.city}

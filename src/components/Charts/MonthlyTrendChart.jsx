@@ -64,26 +64,26 @@ const MonthlyTrendChart = ({ data, selectedYear }) => {
   return (
     <div style={{ width: '100%', height: '100%', maxWidth: '100%', minHeight: '200px', display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', padding: '0 4px', flexWrap: 'wrap', gap: '8px' }}>
-        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-          {avgLabel}: <strong style={{ color: '#0A1A3A' }}>{avgValue}</strong>
+        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#f7f7f7ff' }}>
+          {avgLabel}: <strong style={{ color: '#a4c1faff' }}>{avgValue}</strong>
         </div>
         {peakPoint && (
-          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
+          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#fbfcffff' }}>
             {peakLabel}: <strong style={{ color: '#DC143C' }}>{peakPoint.label}</strong> ({peakPoint.count} crimes)
           </div>
         )}
       </div>
       <div style={{ flex: 1, minHeight: 0 }}>
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: isAllYears ? 30 : 60 }}>
+          <LineChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: isAllYears ? 30 : 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
               dataKey="label"
-              stroke="#6b7280"
+              stroke="#fafcffff"
               className="text-xs"
               {...xAxisProps}
             />
-            <YAxis stroke="#6b7280" fontSize={11} />
+            <YAxis stroke="#fdfeffff" fontSize={11} />
             <Tooltip
               contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px', fontSize: '12px' }}
               formatter={(value, name, props) => [`${value} crimes`, isAllYears ? props.payload.label : `${props.payload.label}`]}

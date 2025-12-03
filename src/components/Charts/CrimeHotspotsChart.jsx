@@ -26,12 +26,12 @@ const CrimeHotspotsChart = ({ data }) => {
   return (
     <div style={{ width: '100%', height: '100%', maxWidth: '100%', minHeight: '200px', display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', padding: '0 4px' }}>
-        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-          Total: <strong style={{ color: '#0A1A3A' }}>{totalCrimes.toLocaleString()}</strong>
+        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#e9e4d2ff' }}>
+          Total: <strong style={{ color: '#ccd7ecff' }}>{totalCrimes.toLocaleString()}</strong>
         </div>
         {topCity && (
-          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-            Top: <strong style={{ color: '#DC143C' }}>{topCity.city}</strong> ({topCity.percentage}%)
+          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#f3f4f7ff' }}>
+            Top: <strong style={{ color: '#f02350ff' }}>{topCity.city}</strong> ({topCity.percentage}%)
           </div>
         )}
       </div>
@@ -39,11 +39,11 @@ const CrimeHotspotsChart = ({ data }) => {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={chartData} layout="vertical" margin={{ top: 5, right: 20, left: 20, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-            <XAxis type="number" stroke="#6b7280" fontSize={11} />
+            <XAxis type="number" stroke="#feffffd4" fontSize={11} />
             <YAxis 
               dataKey="city" 
               type="category" 
-              stroke="#6b7280" 
+              stroke="#dee5f5ff" 
               fontSize={10}
               width={70}
               className="text-xs"
@@ -56,7 +56,7 @@ const CrimeHotspotsChart = ({ data }) => {
               ]}
               cursor={{ fill: 'rgba(42, 59, 90, 0.1)' }}
             />
-            <Bar dataKey="count" fill="#2A3B5A" radius={[0, 8, 8, 0]} />
+            <Bar dataKey="count" fill="#0445bfff" radius={[0, 8, 8, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

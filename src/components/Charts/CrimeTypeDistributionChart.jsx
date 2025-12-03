@@ -39,38 +39,38 @@ const CrimeTypeDistributionChart = ({ data }) => {
 
   return (
     <div style={{ width: '100%', height: '100%', maxWidth: '100%', minHeight: '200px', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', padding: '0 4px' }}>
-        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-          Total Types: <strong style={{ color: '#0A1A3A' }}>{chartData.length}</strong>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2px', padding: '0 4px' }}>
+        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#fefefeff' }}>
+          Total Types: <strong style={{ color: '#b9d0fdff' }}>{chartData.length}</strong>
         </div>
         {topCrime && (
-          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-            Top: <strong style={{ color: '#DC143C' }}>{topCrime.total}</strong> ({topCrime.percentage}%)
+          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#f6f8fbff' }}>
+            Top: <strong style={{ color: '#ef3258ff' }}>{topCrime.total}</strong> ({topCrime.percentage}%)
           </div>
         )}
       </div>
       <div style={{ flex: 1, minHeight: 0 }}>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: 50 }}>
+          <BarChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: 10 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis 
               dataKey="type" 
               angle={-45} 
               textAnchor="end" 
               height={70}
-              stroke="#6b7280" 
-              fontSize={10}
+              stroke="#e9e9e9ff" 
+              fontSize={9}
               className="text-xs"
             />
-            <YAxis stroke="#6b7280" fontSize={11} />
+            <YAxis stroke="#d5ddefff" fontSize={11} />
             <Tooltip 
-              contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px', fontSize: '12px' }}
+              contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }}
               formatter={(value, name) => [`${value} crimes`, name]}
               cursor={{ fill: 'rgba(10, 26, 58, 0.1)' }}
             />
             <Legend />
-            <Bar dataKey="Male" fill="#0A1A3A" radius={[8, 8, 0, 0]} />
-            <Bar dataKey="Female" fill="#2A3B5A" radius={[8, 8, 0, 0]} />
+            <Bar dataKey="Male" fill="#008cffff" radius={[8, 8, 1, 1]} />
+            <Bar dataKey="Female" fill="#44922aff" radius={[8, 8, 0, 0]} />
             <Bar dataKey="Other" fill="#DC143C" radius={[8, 8, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>

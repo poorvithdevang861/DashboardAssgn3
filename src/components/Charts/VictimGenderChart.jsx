@@ -22,16 +22,16 @@ const VictimGenderChart = ({ data }) => {
   const total = data.length
   const dominantGender = chartData[0]
 
-  const COLORS = ['#0A1A3A', '#2A3B5A', '#DC143C', '#FF8C94']
+  const COLORS = ['#038836ff', '#0c5aebff', '#DC143C', '#FF8C94']
 
   return (
     <div style={{ width: '100%', height: '100%', maxWidth: '100%', minHeight: '200px', display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '8px', gap: '12px', flexWrap: 'wrap' }}>
-        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
-          Total: <strong style={{ color: '#0A1A3A' }}>{total.toLocaleString()}</strong>
+        <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#f4f4f4ff' }}>
+          Total: <strong style={{ color: '#a9bde6ff' }}>{total.toLocaleString()}</strong>
         </div>
         {dominantGender && (
-          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#6b7280' }}>
+          <div style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.85rem)', color: '#e9e9e9ff' }}>
             Dominant: <strong style={{ color: '#DC143C' }}>{dominantGender.name}</strong> ({dominantGender.percentage}%)
           </div>
         )}
@@ -46,7 +46,7 @@ const VictimGenderChart = ({ data }) => {
               labelLine={false}
               label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
               outerRadius="70%"
-              fill="#8884d8"
+              fill="#f1f1ffff"
               dataKey="value"
             >
               {chartData.map((entry, index) => (
